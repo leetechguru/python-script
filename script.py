@@ -32,7 +32,7 @@ def extract_data_with_selenium(file_path, datacenter, prefix):
 
         # Match the required HTML pattern
         matches = re.finditer(
-            r"<td>\s*<img.*?>\s*<a href='([^']+)'>((\d{5})_([a-zA-Z0-9_]+)_([tsTS]\d{2,6})_.*?)</a>\s*</td>",
+            r"<td>\s*<img class=\"StatusIcon\" alt=\"\" src=\"[^']+'>\s*<a href='([^']+)'>((\d{5})_([a-zA-Z0-9_]+)_([tsTS]\d{2,6})_.*?)</a>\s*</td>",
             content
         )
 
