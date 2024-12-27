@@ -29,17 +29,15 @@ def write_to_csv(data, output_file):
         writer.writerows(data)
 
 def main():
-    # File paths and prefixes
     at_file = "at.html"
     mi_file = "mi.html"
     at_prefix = "https://at-orionpoll01.corp.securustech.net"
     mi_prefix = "https://mi-orionpoll01.corp.securustech.net"
     
-    # Extract data from both files
     at_data = extract_data(at_file, "at", at_prefix)
     mi_data = extract_data(mi_file, "mi", mi_prefix)
     
-    # Combine and write to CSV
+    
     combined_data = at_data + mi_data
     write_to_csv(combined_data, "TerminalsOrion.csv")
 
