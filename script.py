@@ -28,6 +28,9 @@ def write_to_csv(data, output_file):
         writer.writerow(headers)
         writer.writerows(data)
 
+def write_to_csv1(data, output):
+    headers = ["Datacenter", "Location name", "Site ID", "Terminal", "Link Description"]
+    
 def main():
     at_file = "at.html"
     mi_file = "mi.html"
